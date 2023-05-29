@@ -1,0 +1,330 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+/* เป็น decoration ของ subpages ทุก pages */
+
+/* set defult ของ page */
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* เปลี่ยนฟอนท์และขนาด ทุกตัว heading1 */
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    font-weight: 25em;
+    text-transform: uppercase;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+/* เปลี่ยนฟอนท์และขนาด ทุกตัว heading2 */
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4.375em;
+    letter-spacing: 0.625em;
+    text-align: center;
+    color: white;
+    font-weight: 25em;
+    text-transform: uppercase;
+    opacity: .9;
+}
+
+/* เปลี่ยนฟอนท์และขนาด ทุกตัว heading3 */
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.875em;
+    line-height: 0;
+    font-weight: 25em;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: black;
+}
+
+/* เปลี่ยนฟอนท์และขนาด ของ paragraph ทุกตัว */
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 25em;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/* set ปุ่มกดให้กลับไปยังหน้า index */
+/* ปรับขนาดและตำแหน่งให้อยู่ที่เดิมตลอดเวลา scroll ของปุ่ม return */
+div.return-button {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5em;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+}
+
+/* ปรับขนาด รูปภาพ */
+div.return-button img {
+    max-width: 100%;
+    height: 45px;
+}
+
+/* ตกแต่ง link */
+div.return-button a {
+    margin: 7em;
+    text-decoration: none;
+}
+
+/* ตกแต่ง link */
+div.return-button a:link,
+div.return-button a:visited {
+    background-color: #0E5E6F;
+    border: 2px solid #f29507;
+    color: #fab54b;
+    padding: 5px 10px;
+    box-shadow: 2px 5px 10px #f9ab33;
+    border-radius: 30px;
+
+}
+
+/* ตกแต่ง link */
+div.return-button a:focus,
+div.return-button a:hover,
+div.return-button a:active {
+    background-color: #404258;
+    border-radius: 30px;
+    box-shadow: 2px 5px 10px #404258;
+}
+
+/* จบ set defult ของ page  */
+
+
+/* header */
+/* set ให้ text ใน title box ให้อยู่ตรงกลาง */
+div.title {
+    background: white;
+    padding: 3.75em;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 2em;
+}
+
+/* set ขนาด heading ใน title box */
+div.title h1 {
+    font-size: 35px;
+    letter-spacing: 8px;
+}
+
+/* จบ header */
+
+
+/* main content */
+/* ตกแต่งรูป background image ส่วนบน ของpage */
+.image-header {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/* ตกแต่งรูป background image ตรงกลางของ page */
+.image-two {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* ตกแต่งรูป background image ส่วนล่างของ page */
+.image-three {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* set content box */
+.block {
+    background: white;
+    padding: 60px;
+    width: 820px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* ตกแต่ง เส้นแบ่ง content */
+.line-break {
+    border-bottom: 1px solid black;
+    width: 150px;
+    margin: 0 auto;
+}
+
+/* set imageอันแรก ใน content box เป็น float ให้ content มาล้อมรอบ */
+.first-image {
+    float: left;
+    padding: 0.25em 1em 0.5em 0.25em;
+}
+
+/* ปรับขนาด iamge แรก */
+.first-image img {
+    max-width: 100%;
+    height: 150px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 5px 6px #888888;
+}
+
+/* ตกแต่งกรอบ image แรก */
+.first-image img:hover,
+.first-image img:active {
+    box-shadow: 2px 5px 10px #404258;
+}
+
+/* set imageอันหลัง ใน content box เป็น float ให้ content มาล้อมรอบ */
+.last-image {
+    float: right;
+    padding: 0.25em 0.5em 0.5em 1em;
+}
+
+/* ปรับขนาด iamge สอง */
+.last-image img {
+    max-width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 5px 6px #888888;
+}
+
+/* ตกแต่งกรอบ image แรก */
+.last-image img:hover,
+.last-image img:active {
+    box-shadow: 2px 5px 10px #404258;
+}
+
+/* จบ set content box */
+
+
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+
+    /* ปรับขนาด content box ให้เล็กลงให้เหมาะกับขนาดหน้าจอ */
+    .block {
+        padding: 40px;
+        width: 620px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* ปรับขนาด content box ให้เล็กลงให้เหมาะกับขนาดหน้าจอ */
+    .block {
+        padding: 30px;
+        width: 420px;
+    }
+
+    /* ปรับขนาด heading ให้เล็กลงให้เหมาะกับขนาดหน้าจอ */
+    h2 {
+        font-size: 30px;
+        margin-right: 2em;
+    }
+
+    /* ปรับขนาด background image ให้เล็กลงให้เหมาะกับขนาดหน้าจอ */
+    .image-header,
+    .image-two,
+    .image-three {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    /* ปรับขนาด ปุ่ม return ให้เล็กลงให้เหมาะกับขนาดหน้าจอ */
+    div.return-button {
+        height: 20%;
+        margin-right: 0.5em;
+    }
+
+    div.return-button img {
+        max-width: 100%;
+        height: 40px;
+    }
+
+    div.return-button a {
+        margin-left: 4em;
+    }
+
+    /* จบ ปรับขนาด ปุ่ม return */
+
+}
+
+@media screen and (max-width: 479px) {
+
+    /* ปรับขนาด content box ให้เล็กลงให้เหมาะกับขนาดหน้าจอ */
+    .block {
+        padding: 30px 15px;
+        width: 290px;
+    }
+
+    /* ปรับตำแหน่ง heading อยู่ตรงกลางกับขนาดหน้าจอ */
+    h2 {
+        padding-left: 0.5em;
+    }
+
+    /* ปรับขนาด heading ให้เล็กลงให้เหมาะกับขนาดหน้าจอ */
+    h1 {
+        font-size: 20px !important;
+    }
+
+    /* ปรับขนาด imageแรก กินพื้นที่ให้เต็มแถวเพื่อดันให้ text ลงไปข้างล่าง */
+    .first-image {
+        width: 100%;
+        margin-left: 2em;
+    }
+
+    /* ปรับขนาด imageสอง กินพื้นที่ให้เต็มแถวเพื่อดันให้ text ลงไปข้างล่าง */
+    .last-image {
+        width: 100%;
+        height: 20%;
+    }
+
+    .last-image img {
+        margin-left: 6em;
+    }
+
+    /* จบ ปรับขนาด imageสอง กินพื้นที่ให้เต็มแถวเพื่อดันให้ text ลงไปข้างล่าง */
+
+    /* ปรับขนาด ปุ่ม return ให้เล็กลงให้เหมาะกับขนาดหน้าจอ */
+    div.return-button {
+        height: 20%;
+        margin-right: 0.5em;
+    }
+
+    div.return-button img {
+        max-width: 100%;
+        height: 20px;
+    }
+
+    div.return-button a {
+        margin: 2em;
+    }
+
+    /* จบ ปรับขนาด ปุ่ม return */
+
+
+}

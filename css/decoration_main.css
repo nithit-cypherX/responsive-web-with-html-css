@@ -1,0 +1,366 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+/* เป็น decoration ของ index-page */
+
+/* set default page */
+้html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-size: 1em;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* จบ set default page */
+
+/* Navigation bar*/
+
+/* สร้างกล่อง flex เพื่อจัด nav-bar item(left ,center ,right) */
+header.nav-div-main {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0E5E6F;
+    font-family: "Times New Roman";
+}
+
+/* nav-bar left */
+
+/* สร้างกล่อง nav-bar left เป็น flex */
+div.nav-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: -3em;
+}
+
+/* จัดตำแหน่งและขนาด img ของ nav-left  */
+.nav-left nav img {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* /nav-bar left */
+
+
+/* nav-bar center */
+/* สร้างกล่อง nav-bar center เป็น flex */
+div.nav-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 2em;
+}
+
+/* ปรับขนาดและจัดตำแหน่งของ heading ให้อยู่ตรงกลาง */
+div.nav-center h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #F9AB33;
+}
+
+/* ปรับขนาด paragraph */
+div.nav-center p {
+
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-align: top;
+    padding-bottom: .5em;
+    color: #F9AB33;
+}
+
+/* nav-bar center */
+
+
+/* nav-bar right */
+/* สร้างกล่อง nav-bar right เป็น flex */
+.nav-right nav ul {
+    display: flex;
+    padding: 0 .5em 0 0;
+    list-style: none;
+    justify-content: right;
+    margin-left: 0.5em;
+}
+
+/* ปรับขนาดอักษร */
+.nav-right nav ul li {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+/* จัดการ link ไม่ให้มีเส้น */
+.nav-right nav ul a {
+    display: block;
+    padding: 0.5em .6em;
+    margin: 0.25em;
+    text-decoration-line: none;
+}
+
+
+/* ตกแต่งตัว link */
+.nav-right nav ul li a:link,
+.nav-right nav ul li a:visited {
+    color: #f29507;
+}
+
+/* ตกแต่งตัว link */
+.nav-right nav ul li a:focus,
+.nav-right nav ul li a:hover,
+.nav-right nav ul li a:active {
+    color: #FFEFD6;
+}
+
+/* nav-bar right */
+
+/* จบ Navigation bar */
+
+
+/* สร้าง container-page ทั้งหมดจัดให้เป็น grid  */
+section#container-page {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr 1fr;
+    background-color: #FFEFD6;
+
+}
+
+/* สร้างกล่องเปล่า เพื่อเป็นพื้นที่ให้ กล่อง nav-bar menu ด้านข้าง 
+เพราะ ตำแหน่ง nav-bar menu จะไม่อยู่ใน float ของ container-page */
+div.container-space {
+    grid-column: 1 / 1;
+    grid-row: 1 / span 2;
+
+}
+
+/* สร้าง container-menu ให้เป็น flex และ เวลา scroll ก็ยึกตำแหน่งเดิมตลอด */
+div.container-menu {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5em;
+    justify-content: center;
+    position: fixed;
+    background-color: #FFEFD6;
+}
+
+/* ปรับขนาดและตำแหน่งของ ตัวlinkแต่ละอัน */
+div.container-menu .blog-menu {
+    font-size: 1.5em;
+    text-decoration: none;
+    line-height: 2em;
+    margin-left: 1em;
+    font-family: Consolas;
+}
+
+div.container-menu nav ul {
+    list-style: none;
+}
+
+/* ตกแต่ง link */
+div.container-menu nav ul li a:link,
+div.container-menu nav ul li a:visited {
+    color: #f29507;
+}
+
+/* ตกแต่ง link */
+div.container-menu nav ul li a:focus,
+div.container-menu nav ul li a:hover,
+div.container-menu nav ul li a:active {
+    color: #0E5E6F;
+}
+
+/* จบ container-menu */
+
+
+/* ส่วน container-main */
+
+/* จัดตำแหน่งของ container-main(พื้นที่ของcontentหลัก) ใน grid ให้อยู่ ตรงกลาง และ ขวา ของ page */
+section.container-main {
+    grid-column: 2 / span 3;
+    background-color: #FFEFD6;
+}
+
+/* แบ่ง content blog เป็น 2 column ใช้ grid */
+div.blog-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* ตกแต่งแต่ละกล่องของ content แต่ set ให้ใช้กล่องที่มีรูปร่างสีเหมือนกันหมด */
+.blog-item {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 5px 10px 10px #888888;
+    overflow: hidden;
+    margin: 0.5em 1em 1em 0em;
+}
+
+
+/* ตกแต่ง image ใน content blog ให้อยู่ตรงกลาง */
+.blog-item-image {
+    max-width: 100%;
+    height: 220px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #FFEFD6;
+    overflow: hidden;
+}
+
+/* ตกแต่ง content ใน content blog */
+.blog-item-content {
+    padding: 15px;
+    text-align: center;
+    background-color: #0E5E6F;
+
+}
+
+/* ปรับขนาดและตกแต่ง heading */
+.blog-item-content h1 {
+    margin-left: -15px;
+    margin-right: -15px;
+    color: #f29507;
+    font-family: Garamond;
+    font-size: 1.5em;
+}
+
+/* เปลี่ยนฟอนท์ paragraph */
+.blog-item-content p {
+    color: #fab54b;
+    font-family: Courier;
+}
+
+/* เปลี่ยนฟอนท์ paragraph */
+.blog-item-content a {
+    text-decoration: none;
+    font-family: Courier;
+}
+
+/* ตกแต่ง link */
+.blog-item-content a:link,
+.blog-item-content a:visited {
+    background-color: #0E5E6F;
+    border: 2px solid #f29507;
+    color: #fab54b;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 2px 5px 10px #f9ab33;
+
+}
+
+/* ตกแต่ง link */
+.blog-item-content a:focus,
+.blog-item-content a:hover,
+.blog-item-content a:active {
+    background-color: #404258;
+    box-shadow: #404258 0px 8px 24px, #404258 0px 16px 56px, #404258 0px 24px 80px;
+}
+
+/* จบ ตกแต่ง content ใน content blog */
+
+/* ปรับขนาด content blog 3 ให้กินพื้นที่ column ยาวไป 2 column*/
+.blog-item3 {
+    grid-column: 1 / span 2;
+}
+
+/* ปรับขนาดรูปภาพใน content blog 3 ให้ตามไป 2 column ด้วย*/
+.blog-item-image3 {
+    height: 400px !important;
+}
+
+/* ปรับขนาด content blog 6 ให้กินพื้นที่ column ยาวไป 2 column*/
+.blog-item6 {
+    grid-column: 2 / span 3;
+}
+
+/* ปรับขนาดรูปภาพใน content blog 3 ให้ตามไป 2 column ด้วย*/
+.blog-item-image6 {
+    height: 400px !important;
+}
+
+/* ใน content blog 3 และ  6 จะมีรูปภาพย่อยอีกใน content blog เลยจัดให้เป็น grid แบ่ง 3 column*/
+.blog_post_image_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin-bottom: 1em;
+
+}
+
+/* ปรับขนาดและตกแต่งกรอบรูปภาพย่อย */
+.blog_post_image_grid img {
+    max-width: 100%;
+    padding: 5px;
+    background-color: #eee;
+    border: 0.2px solid #ddd;
+    box-shadow: 2px 5px 6px #888888;
+    height: 90%;
+    margin: 1em 0em;
+}
+
+/* ตกแต่งรูปภาพย่อย */
+.blog_post_image_grid img:hover,
+.blog_post_image_grid img:active {
+    box-shadow: 15px 26px 50px #404258;
+}
+
+/* ใส่รูปภาพที่เป็น main ในแต่ละ content blog */
+.blog-item1 .blog-item-image {
+    background-image: url('../image/beach3.jpg');
+}
+
+.blog-item2 .blog-item-image {
+    background-image: url("../image/mountain2.jpg");
+}
+
+.blog-item3 .blog-item-image {
+    background-image: url('../image/railway3.jpg');
+}
+
+.blog-item4 .blog-item-image {
+    background-image: url('../image/concert1.jpg');
+}
+
+.blog-item5 .blog-item-image {
+    background-image: url('../image/beach2.jpg');
+}
+
+.blog-item6 .blog-item-image {
+    background-image: url('../image/love1.jpg');
+}
+
+/* จบ ใส่รูปภาพที่เป็น main ในแต่ละ content blog */
+
+/* จบ ส่วน container-main */
+
+
+/* footer */
+/* set ข้อความให้อยู่ตรงกลาง footer */
+footer {
+    background-color: #0E5E6F;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+/* ปรับขนาดเปลี่ยนฟอนท์ paragraph */
+footer p {
+    margin: 0;
+    color: #f29507;
+    font-weight: 200;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* จบ footer */
